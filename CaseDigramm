@@ -1,0 +1,12 @@
+@startuml
+skinparam class {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+class "Spelling" as P {
+Pensil
+Composition,composition writing (Notes, author's talent; Rules for writing notes )
+}
+hide circle
+@enduml
