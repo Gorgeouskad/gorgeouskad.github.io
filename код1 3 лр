@@ -1,0 +1,19 @@
+@startuml
+actor "Готовый заказ" as owner
+boundary "Сайт" as app
+entity "БД" as data
+actor "Клиент" as trainee
+trainee -> owner : Запрос по готовности заказа
+owner -> app : Проверка готовность заказа
+app -> data : Обращение к данным
+data -> app : Передача данных
+app -> owner: Информация о готовности
+owner -> app : Определение данных заказа
+app -> data : Обращение к данным
+data -> app : Передача данных
+app -> owner: Информация о заказе
+owner -> app : Оформление и "закрытие" заказа
+app -> data : Запись в базу данных
+data -> app : Подтверждение записи данных
+app -> owner : Подтверждение сдачи
+@enduml
